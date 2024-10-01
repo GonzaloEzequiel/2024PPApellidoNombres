@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 PP Pérez, Gonzalo Ezequiel</title>
+    <link rel="stylesheet" href="./abm.css">
+    <script type="module" src="./abm.js"></script>
+</head>
+<body>
+    <div id="formDatos">
+        <div class="container-horizontal">
+            <div class="container-vertical">
+                <h2>Form Datos</h2>
+                <form>
+                    <label for="select_tipo" name="label_tipo">Filtrar Por: </label>
+                    <select id="sl_tipo" name="select_tipo">
+                        <option value="0" selected>Todos</option>
+                        <option value="1">Aereos</option>
+                        <option value="2">Terrestres</option>
+                    </select>
+                    <br>
+                    <div id="div_checkboxes" name="checkboxes">
+                        <input type="checkbox" class="selectores" id="chk_id" checked>ID
+                        <input type="checkbox" class="selectores" id="chk_modelo" checked>Modelo
+                        <input type="checkbox" class="selectores" id="chk_anofab" checked>Año Fabr.
+                        <input type="checkbox" class="selectores" id="chk_velmax" checked>Vel. Máx.
+                        <input type="checkbox" class="selectores" id="chk_altmax" checked>Alt. Máx.
+                        <input type="checkbox" class="selectores" id="chk_autonomia" checked>Autonomia
+                        <input type="checkbox" class="selectores" id="chk_cantpue" checked>Cant. Puertas
+                        <input type="checkbox" class="selectores" id="chk_cantrue" checked>Cant. Ruedas
+                    </div>
+                    <label for="texto_velmaxpromedio">Promedio Velocidad Máxima: </label>
+                    <input type="text" id="txt_velmaxpromedio" mame="texto_velmaxpromedio" disabled>
+                    <input type="button" value="Calcular" id="btn_calcular" name="boton_calcular">
+                    <br>
+                    <table>
+                        <thead>
+                            <th id="orden_id"><button >ID</button></th>
+                            <th><button id="orden_modelo">Modelo</button></th>
+                            <th><button id="orden_anofab">AñoFabr.</button></th>
+                            <th><button id="orden_velmax">Vel.Máx.</button></th>
+                            <th><button id="orden_altmax">Alt.Máx.</button></th>
+                            <th><button id="orden_autonomia">Autonomia</button></th>
+                            <th><button id="orden_cantpue">Cant.Puertas</button></th>
+                            <th><button id="orden_cantrue">Cant.Ruedas</button></th>
+                        </thead>
+                        <tbody id="tabla_cuerpo">
+                        </tbody>
+                    </table>
+                    <input type="button" id="btn_agregar" value="Agregar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="formABM">
+        <div class="container-horizontal">
+            <div class="container-vertical">
+                <h2>Formulario ABM</h2>
+                <form>
+                    <label class="form_label">ID: </label>
+                    <input class="form_input" type="text" name="frm_id" id="frm_id">
+                    <br>
+                    <label class="form_label">Modelo: </label>
+                    <input class="form_input" type="text" name="frm_modelo" id="frm_modelo">
+                    <br>
+                    <label class="form_label">Año Fabricación: </label>
+                    <input class="form_input" type="text" name="frm_anofab" id="frm_anofab">
+                    <br>
+                    <label class="form_label">Velocidad Máxima: </label>
+                    <input class="form_input" type="text" name="frm_velmax" id="frm_velmax">
+                    <br>
+                    <label class="form_label">Tipo: </label>
+                    <select class="form_input" name="frm_tipo" id="frm_tipo">
+                        <option value="Aereo" selected>Aereo</option>
+                        <option value="Terrestre">Terrestre</option>
+                    </select>
+                    <br>
+                    <label class="form_label" id="lbl_atr3">Altura Máxima: </label>
+                    <input class="form_input" type="text" id="frm_atr3">
+                    <br>
+                    <label class="form_label" id="lbl_atr4">Autonomía: </label>
+                    <input class="form_input" type="text" id="frm_atr4">
+                    <br>
+                    <input class="form_label" type="button" id="btn_aceptar" value="Aceptar">
+                    <input class="form_input" type="button" id="btn_cancelar" value="Cancelar">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
